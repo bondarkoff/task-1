@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ukraine,
+.japan,
+.iceland,
+.czech {
+    width: 300px;
+    margin: 15px;
+    list-style-type: none;
+    border: 1px solid #e5e5e5;
+}
+
+.ukraine div:first-child {
+    background-color: #0057b8;
+    height: 100px;
+}
+
+.ukraine div:last-child {
+    background-color: #ffd700;
+    height: 100px;
+}
+
+.japan {
+    width: 298px;
+    height: 200px;
+    position: relative;
+}
+
+.japan div div {
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.iceland div {
+    height: 200px;
+    background-color: blue;
+    position: relative;
+}
+
+.iceland > div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    top: 80px;
+    left: 0;
+}
+
+.horiz_band {
+    z-index: 11;
+    position: absolute !important;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: red !important;
+    height: 20px !important;
+}
+
+.vertic_band {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 20px;
+    height: 100%;
+    background-color: red !important;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+.czech {
+    height: 200px;
+}
+
+.czech div {
+    position: relative;
+}
+
+.czech > div:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 125px solid blue;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+}
+
+.czech div > div:first-child {
+    height: 100px;
+}
+
+.czech div > div:last-child {
+    height: 100px;
+    background-color: red;
+}
